@@ -18,16 +18,12 @@ public class Solution {
 			  //int count =0;
                boolean small=false,caps=false,numeric=false,special=false;
 				   // System.out.println("else");
-                   if(password.length()>=6)
-                   {
-					   for(int i=0;i<password.length();i++)
+                 for(int i=0;i<password.length();i++)
                          {
 					 
                        if(password.charAt(i)>=48 && password.charAt(i)<=57 )
 							 
 						        small=true;
-							 
-
 						
 						if   (password.charAt(i)>=65 && password.charAt(i)<=90 ) 
 
@@ -45,8 +41,7 @@ public class Solution {
                                password.charAt(i)=='-' || password.charAt(i)=='+')
 						  
 							  special=true;
-							
-                    
+					
 					  }
 					  if(small==false)
 						  ans++;
@@ -56,18 +51,11 @@ public class Solution {
 						  ans++;
                       if(special==false) 
 						  ans++;
-
-                   }
-				   	  
-                  //  else
-                   //{
-                     //  ans=6-password.length();
-                   //}
+				   
+                    ans=Math.max(ans,6-password.length());
+                  
                    
-
-                  System.out.println(ans);
-                  
-                  
+                  return ans;
     }
 
    
